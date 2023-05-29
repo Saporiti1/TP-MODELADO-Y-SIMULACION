@@ -1,0 +1,65 @@
+
+
+.polimorfismo{
+  height: 85vh;
+  width: 85vw;
+  margin:auto;
+  border-radius: 50px;
+  background: #db8fe1;
+  
+
+}
+
+.bordeado{
+  border-radius: 50px;
+  
+}
+
+
+
+.grafico2{
+  width: 100%;
+
+  height: 100px;
+}
+
+.inputFuncion{
+  width: 30vw;
+  height: 5vh;
+  padding-left: 1vw;
+  margin: 1vh;
+  border-radius: 10px;
+  
+
+}
+
+.range{
+margin-right: 2vw;
+max-width: 30vw;
+ 
+  
+}
+
+
+
+.margen2{
+  margin-top: 15vh;
+  
+}
+
+.centrar{
+  display:flex;
+  flex-direction: row;
+}
+
+.subir{
+  margin-top: -10vh;
+  
+}
+
+
+
+.izquierdo{
+  margin-left: -18vw;
+}
+

@@ -1,0 +1,129 @@
+body{
+    background-image: url("https://png.pngtree.com/background/20210712/original/pngtree-cute-hand-drawn-style-math-education-plaid-background-picture-image_1176716.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.pantalla{
+    display: flex;
+}
+
+.centrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card{
+    width: 90vw;
+
+    border-radius: 50px;
+    padding: 2vw;
+    justify-content: space-between;
+    background: #a5bdf1;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow-wrap: break-word;
+}
+
+.grafico{
+  background-color: white;
+  height: 100;
+  width: 90;
+  margin-bottom: 5vw;
+  border-radius: 50px;
+  margin-left: 1vw;
+}
+
+
+.titulo{
+
+    margin-bottom: 3vh;
+}
+
+.cajaLimites{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5vh;
+    flex-direction: space-between;
+    margin-left: 0.5rem;
+
+}
+
+.limiteInf{
+    margin-right: 3vw;
+    margin-bottom: 3vh;
+    
+}
+.limiteSup{
+    margin-right: 3vw;
+    margin-bottom: 3vh;
+}
+/*
+.condInicial{
+    margin-left: -9.5vw;
+}*/
+.cajaIzquierda{
+    margin-left: 3vw;
+    margin-top: 7vh;
+    width: 100%;
+}
+
+
+.margen{
+    margin-top: 5vh;
+    margin-bottom: 1vw;    
+    margin-left: 1vw;
+}
+
+.espaciado{
+    margin-bottom: 1vw;    
+}
+
+.dropDown{
+    background-color: #b4d8f7;
+    max-width: 10rem;
+    border-radius: 50px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+
+    margin-bottom: 3vh;
+}
+
+.crentrarTitulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: monospace;
+    color:darkblue;
+}
+
+.texto{
+    flex-wrap: wrap
+}
+
+.texto2{
+    display: flex;
+    max-width: 30vw;
+    margin-bottom: 5vh;
+}
+
+.inputs{
+    width: 7rem;
+    border-radius: 8px;
+    padding-left: 9px;
+  
+    height: 1.8rem;
+}
+
+.colorOpcion{
+    color: black;
+}
