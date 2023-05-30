@@ -59,7 +59,10 @@ export function RungeKuttaGraph(a, b, m, fPrime, y0) {
   const y01 = parseFloat(y0);
 
   const rungeKuttaPoints = rungeKutta(fPrime, a0, b0, y01, m0);
-  
+
+
+  console.log(rungeKuttaPoints);
+
   const options = {
     xAxis: { domain: [a0, b0 + 1] },
     yAxis: { domain: [a0, 15] },

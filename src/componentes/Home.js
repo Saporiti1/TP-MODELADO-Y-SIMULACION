@@ -72,12 +72,14 @@ export function Home() {
   const [limB,setlimB]=useState(0);
   const [iterationCount,setIterationCount]=useState(10);
   const [initialValue,setinitialValue]=useState(0);
+  const [h,setH]=useState(0);
 
   const [mathFunction,setMathFunction]=useState("");
   const [selectedMethod,setSelectedMethod]=useState(MethodTypes.EULER.toString())
 
   const[graphOptions, setGraphOptions] = useState({});
   const[trapezeArea, setArea] = useState(0);
+  const[resultado, setResultado] = useState(0);
 
 
   const rootEl = useRef(null);
@@ -103,10 +105,13 @@ export function Home() {
 
         options = result.options;
       }
-      else if (selectedMethod === MethodTypes.RUNGE_KUTTA.toString()) // Runge Kutta
+      else if (selectedMethod === MethodTypes.RUNGE_KUTTA.toString()) {// Runge Kutta
         options = RungeKuttaGraph(limA, limB, iterationCount, mathFunction, initialValue);
+        setResultado(options.data[0].points[iterationCount][1]);
+      }
       else if (selectedMethod === MethodTypes.EULER.toString()) // Euler
         options = EulerGraph(limA, limB, iterationCount, mathFunction, initialValue);
+        setResultado(options.data[0].points[iterationCount][1]);
 
       console.log("Options Changed")
       options.target = '#grafico'
@@ -163,6 +168,17 @@ export function Home() {
     const parsed = parseFloat(value);
     setinitialValue(parsed);
   }
+
+  const onHChange=(e)=>{
+    let value = e.target.value;
+
+    if (value === '')
+      value = '0';
+
+    const parsed = parseFloat(value);
+    setH(parsed);
+  }
+
   const onSelectedMethodChange = (e) => {
     console.log("hola",e.target.value)
     setSelectedMethod(e.target.value)
@@ -229,6 +245,14 @@ export function Home() {
                 </h2>
               }
             </div>
+            { (selectedMethod!==MethodTypes.TRAPEZOID.toString()) &&
+                <div className="">
+                  <h2 className="text-1xl font-semibold text-white  dark:text-white xl:text-44xl">
+                      Solución aproximada en x={limB}:
+                  </h2>
+                  <p>{resultado}</p>
+                </div>
+              }
             
             <div className="margen">
               <h2 className="text-1xl font-semibold text-white  dark:text-white xl:text-44xl lg:w-96 espaciado">
